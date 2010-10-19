@@ -24,13 +24,6 @@
       <q i18n:name="context_title" tal:content="context/Title">title</q>
   </h1>
 
-  <a href=""
-       class="link-parent"
-       tal:attributes="href string:${context/absolute_url}"
-       i18n:translate="return_to_view">
-    Return
-  </a>
-
   <p i18n:translate="description_manage_contextual_portlets">
     The portlet columns will first display portlets
     explicitly assigned in this context. Use the buttons on each portlet
@@ -64,6 +57,15 @@
 
     </form>
 
+  </div>
+
+  <div class="managePortletsLink">
+    <a href=""
+       class="link-parent"
+       tal:attributes="href string:${context/absolute_url}"
+       i18n:translate="return_to_view">
+      Return
+    </a>
   </div>
 
 </div>
