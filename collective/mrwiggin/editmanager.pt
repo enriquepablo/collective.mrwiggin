@@ -1,6 +1,7 @@
 <div class="portlets-manager-rendered"
      tal:attributes="rel string:#portletmanager-${view/normalized_manager_name};
-                     id string:portletmanager-renderer-${view/normalized_manager_name};">
+                     id string:portletmanager-renderer-${view/normalized_manager_name};
+                     title view/normalized_manager_name;">
     <!-- split point (i know its dumbt to do like this) -->
     <div metal:use-macro="context/@@editmanager_macros/macros/rendered-portlets" />
     <!-- split point (i know its dumbt to do like this) -->
