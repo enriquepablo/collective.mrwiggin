@@ -18,7 +18,16 @@ var overlay_options = {
 
 jq(document).ready(function() {
   jq('.portlets-manager-rendered').each(function() {
-    jq(this).expose(expose_options).load();
+    jq(this).hover(
+      function() {
+        jq(this).expose(expose_options);
+        jq(this).css('border', '2px solid red');
+      }
+      function() {
+        jq(this).css('border', 'none');
+        jq.mask.close();
+      }
+    );
     jq(this).click(function() {
       jq(jq(this).attr('rel')).overlay(overlay_options).load();
       return false;
