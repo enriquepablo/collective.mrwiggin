@@ -22,7 +22,7 @@ jq(document).ready(function() {
       function() {
         jq(this).expose(expose_options);
         jq(this).css('border', '2px solid red');
-      }
+      },
       function() {
         jq(this).css('border', 'none');
         jq.mask.close();
